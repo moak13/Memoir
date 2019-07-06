@@ -1,2 +1,2 @@
 # Memoir
-A travel blog application where memories can be shared with friends
+A travel blog companion application where memories can be shared with friends
