@@ -18,8 +18,9 @@ class _HomeViewState extends State<HomeView> {
         allowFontScaling: true)
       ..init(context);
     return Scaffold(
-        body: SingleChildScrollView(
-      child: Column(
+        body: ListView(
+      children: <Widget>[
+        Column(
         children: <Widget>[
           Padding(
             padding:
@@ -103,6 +104,7 @@ class _HomeViewState extends State<HomeView> {
           )
         ],
       ),
+      ],
     ));
   }
 }
