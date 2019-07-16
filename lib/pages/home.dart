@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:memoir/pages/recommend_list.dart';
+import 'package:memoir/utils/recommend_list.dart';
 import 'package:memoir/utils/showcase.dart';
 
 class HomeView extends StatefulWidget {
@@ -97,13 +97,13 @@ class _HomeViewState extends State<HomeView> {
                     ))
               ],
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 30, right: 10),
-            child: RecommendList(),
           )
         ],
       ),
+      Padding(
+            padding: const EdgeInsets.only(left: 30, right: 10),
+            child: RecommendList(),
+          )
       ],
     ));
   }

@@ -24,8 +24,16 @@ class _ShowCaseState extends State<ShowCase> {
       itemBuilder: (BuildContext context, int index) {
         return InkWell(
           onTap: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => PostView()));
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => PostView(
+                      color: data[index].color,
+                      title: data[index].title,
+                      subtitle: data[index].subtitle,
+                      rating: data[index].rating,
+                      days: data[index].day,
+                      intro: data[index].intro,
+                      view: data[index].view,
+                    )));
           },
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
