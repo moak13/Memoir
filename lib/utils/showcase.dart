@@ -48,7 +48,7 @@ class _ShowCaseState extends State<ShowCase> {
                       width: ScreenUtil().setWidth(600),
                       decoration: BoxDecoration(
                           color: data[index].color,
-                          borderRadius: BorderRadius.circular(5)),
+                          borderRadius: BorderRadius.circular(10)),
                       child: Padding(
                         padding: const EdgeInsets.all(30.0),
                         child: Container(
@@ -102,12 +102,28 @@ class _ShowCaseState extends State<ShowCase> {
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 children: <Widget>[
+                                  Row(
+                                    children: <Widget>[
+                                      Icon(Icons.star,
+                                          color: Colors.orange, size: 15),
+                                      Text(
+                                        'Score',
+                                        style: TextStyle(
+                                            fontSize: ScreenUtil().setSp(25),
+                                            fontWeight: FontWeight.bold
+                                      ),),
+                                      Text(data[index].rating.toString(),
+                                          style: TextStyle(
+                                              fontSize: ScreenUtil().setSp(25),
+                                              fontWeight: FontWeight.bold))
+                                    ],
+                                  ),
                                   Icon(
                                     Icons.access_time,
                                     color: Colors.grey,
                                     size: 15,
                                   ),
-                                  Text(data[index].day)
+                                  Text(data[index].day, style: TextStyle(fontWeight: FontWeight.bold),)
                                 ],
                               ),
                             )

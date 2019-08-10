@@ -21,6 +21,7 @@ class _RecommendListState extends State<RecommendList> {
     return ListView.builder(
       itemCount: data.length,
       shrinkWrap: true,
+      physics: NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         return InkWell(
           onTap: () {

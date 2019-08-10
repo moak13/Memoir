@@ -156,36 +156,45 @@ class PostView extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Align(
-                        alignment: Alignment.topLeft,
-                        child: CircleAvatar(
-                          backgroundColor: Colors.white12.withOpacity(0.3),
-                          child: IconButton(
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                            icon: Icon(
-                              Icons.arrow_back_ios,
-                              color: Colors.white,
-                            ),
-                          ),
-                        )),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Align(
-                        alignment: Alignment.topRight,
-                        child: CircleAvatar(
-                          backgroundColor: Colors.white,
-                          child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.favorite,
-                              color: Colors.grey[300],
-                            ),
-                          ),
-                        )),
+                    padding: const EdgeInsets.only(top: 30.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(left: 5),
+                          child: Align(
+                              alignment: Alignment.topLeft,
+                              child: CircleAvatar(
+                                backgroundColor:
+                                    Colors.white12.withOpacity(0.3),
+                                child: IconButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  icon: Icon(
+                                    Icons.arrow_back_ios,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              )),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 20),
+                          child: Align(
+                              alignment: Alignment.topRight,
+                              child: CircleAvatar(
+                                backgroundColor: Colors.white,
+                                child: IconButton(
+                                  onPressed: () {},
+                                  icon: Icon(
+                                    Icons.favorite,
+                                    color: Colors.grey[300],
+                                  ),
+                                ),
+                              )),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -208,7 +217,8 @@ class PostView extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 30, top: 10, bottom: 10),
+                padding: const EdgeInsets.only(
+                    left: 30, top: 10, bottom: 10, right: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -229,7 +239,8 @@ class PostView extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 30, top: 10, bottom: 10),
+                padding: const EdgeInsets.only(
+                    left: 30, top: 10, bottom: 10, right: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -248,6 +259,9 @@ class PostView extends StatelessWidget {
                     )
                   ],
                 ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 30, right: 10),
               )
             ],
           ),
